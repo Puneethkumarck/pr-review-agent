@@ -1,7 +1,8 @@
 package com.stablebridge.prreview.domain.model;
 
-import java.util.List;
 import lombok.Builder;
+
+import java.util.List;
 
 @Builder(toBuilder = true)
 public record CodeAnalysis(

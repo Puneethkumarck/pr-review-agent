@@ -1,11 +1,11 @@
 package com.stablebridge.prreview.domain.service;
 
+import org.junit.jupiter.api.Test;
+
 import static com.stablebridge.prreview.fixtures.CodeAnalysisFixtures.aCleanAnalysis;
 import static com.stablebridge.prreview.fixtures.CodeAnalysisFixtures.aCodeAnalysis;
 import static com.stablebridge.prreview.fixtures.PrDiffFixtures.aPrDiff;
 import static org.assertj.core.api.Assertions.assertThat;
-
-import org.junit.jupiter.api.Test;
 
 class ReviewFormatterTest {
 

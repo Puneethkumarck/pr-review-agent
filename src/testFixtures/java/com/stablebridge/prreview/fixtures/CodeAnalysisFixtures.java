@@ -1,12 +1,13 @@
 package com.stablebridge.prreview.fixtures;
 
-import static com.stablebridge.prreview.domain.model.IssueCategory.STYLE;
-import static com.stablebridge.prreview.domain.model.IssueSeverity.INFO;
-
 import com.stablebridge.prreview.domain.model.CodeAnalysis;
 import com.stablebridge.prreview.domain.model.CodeIssue;
 import com.stablebridge.prreview.domain.model.ReviewSuggestion;
+
 import java.util.List;
+
+import static com.stablebridge.prreview.domain.model.IssueCategory.STYLE;
+import static com.stablebridge.prreview.domain.model.IssueSeverity.INFO;
 
 public final class CodeAnalysisFixtures {
 
