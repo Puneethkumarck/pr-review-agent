@@ -1,0 +1,11 @@
+app:
+  github:
+    token: ${GITHUB_TOKEN:}
+    api-url: https://api.github.com
+
+spring:
+  application:
+    name: pr-review-agent
+  shell:
+    interactive:
+      enabled: true
