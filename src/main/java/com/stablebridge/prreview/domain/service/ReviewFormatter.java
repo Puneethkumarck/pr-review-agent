@@ -1,14 +1,14 @@
 package com.stablebridge.prreview.domain.service;
 
-import static com.stablebridge.prreview.domain.model.IssueSeverity.CRITICAL;
-import static com.stablebridge.prreview.domain.model.IssueSeverity.WARNING;
-
 import com.stablebridge.prreview.domain.model.CodeAnalysis;
 import com.stablebridge.prreview.domain.model.CodeIssue;
 import com.stablebridge.prreview.domain.model.IssueSeverity;
 import com.stablebridge.prreview.domain.model.PrDiff;
 import com.stablebridge.prreview.domain.model.ReviewSuggestion;
 import org.springframework.stereotype.Service;
+
+import static com.stablebridge.prreview.domain.model.IssueSeverity.CRITICAL;
+import static com.stablebridge.prreview.domain.model.IssueSeverity.WARNING;
 
 @Service
 public class ReviewFormatter {

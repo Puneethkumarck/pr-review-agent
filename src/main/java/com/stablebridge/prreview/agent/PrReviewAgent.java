@@ -1,7 +1,5 @@
 package com.stablebridge.prreview.agent;
 
-import static com.stablebridge.prreview.agent.ReviewPersonas.CODE_REVIEWER;
-
 import com.embabel.agent.api.annotation.AchievesGoal;
 import com.embabel.agent.api.annotation.Action;
 import com.embabel.agent.api.annotation.Agent;
@@ -14,8 +12,11 @@ import com.stablebridge.prreview.domain.model.PrDiff;
 import com.stablebridge.prreview.domain.model.PullRequestInput;
 import com.stablebridge.prreview.domain.port.PullRequestProvider;
 import com.stablebridge.prreview.domain.service.ReviewFormatter;
-import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
+
+import java.util.stream.Collectors;
+
+import static com.stablebridge.prreview.agent.ReviewPersonas.CODE_REVIEWER;
 
 @Agent(description = "Analyze a GitHub pull request: fetch diff, find issues, post review")
 @RequiredArgsConstructor

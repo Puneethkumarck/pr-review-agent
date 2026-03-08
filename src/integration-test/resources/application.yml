@@ -1,0 +1,13 @@
+app:
+  github:
+    token: test-token
+    api-url: http://localhost:8080
+
+spring:
+  application:
+    name: pr-review-agent-integration-test
+  shell:
+    interactive:
+      enabled: false
+    noninteractive:
+      enabled: false

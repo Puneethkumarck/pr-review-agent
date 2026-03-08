@@ -1,14 +1,5 @@
 package com.stablebridge.prreview.agent;
 
-import static com.stablebridge.prreview.fixtures.CodeAnalysisFixtures.aCodeAnalysis;
-import static com.stablebridge.prreview.fixtures.PrDiffFixtures.aPrDiff;
-import static com.stablebridge.prreview.fixtures.PullRequestInputFixtures.OWNER;
-import static com.stablebridge.prreview.fixtures.PullRequestInputFixtures.PR_NUMBER;
-import static com.stablebridge.prreview.fixtures.PullRequestInputFixtures.REPO;
-import static com.stablebridge.prreview.fixtures.PullRequestInputFixtures.aPullRequestInput;
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.BDDMockito.given;
-
 import com.stablebridge.prreview.domain.model.CompletedReview;
 import com.stablebridge.prreview.domain.port.PullRequestProvider;
 import com.stablebridge.prreview.domain.service.ReviewFormatter;
@@ -17,6 +8,15 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+
+import static com.stablebridge.prreview.fixtures.CodeAnalysisFixtures.aCodeAnalysis;
+import static com.stablebridge.prreview.fixtures.PrDiffFixtures.aPrDiff;
+import static com.stablebridge.prreview.fixtures.PullRequestInputFixtures.OWNER;
+import static com.stablebridge.prreview.fixtures.PullRequestInputFixtures.PR_NUMBER;
+import static com.stablebridge.prreview.fixtures.PullRequestInputFixtures.REPO;
+import static com.stablebridge.prreview.fixtures.PullRequestInputFixtures.aPullRequestInput;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.BDDMockito.given;
 
 @ExtendWith(MockitoExtension.class)
 class PrReviewAgentTest {

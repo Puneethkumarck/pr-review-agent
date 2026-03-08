@@ -2,6 +2,7 @@ package com.stablebridge.prreview.fixtures;
 
 import com.stablebridge.prreview.domain.model.FileChange;
 import com.stablebridge.prreview.domain.model.PrDiff;
+
 import java.util.List;
 
 public final class PrDiffFixtures {
