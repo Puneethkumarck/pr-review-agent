@@ -16,6 +16,13 @@ class ArchitectureTest {
     private static final String INFRASTRUCTURE = "..infrastructure..";
     private static final String AGENT = "..agent..";
     private static final String SHELL = "..shell..";
+    private static final String APPLICATION = "..application..";
+
+    @ArchTest
+    static final ArchRule domainShouldNotDependOnApplication =
+            noClasses().that().resideInAPackage(DOMAIN)
+                    .should().dependOnClassesThat().resideInAPackage(APPLICATION)
+                    .because("Domain must not depend on application layer");
 
     @ArchTest
     static final ArchRule domainShouldNotDependOnInfrastructure =
