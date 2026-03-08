@@ -47,6 +47,24 @@ class ReviewFormatterTest {
     }
 
     @Test
+    void shouldFormatSummaryWithFileList() {
+        // given
+        var diff = aPrDiff();
+
+        // when
+        var result = formatter.formatSummary(diff);
+
+        // then
+        assertThat(result)
+                .contains("## PR Summary: Fix null pointer")
+                .contains("fix/npe-merchant-config")
+                .contains("main")
+                .contains("Files Changed (2)")
+                .contains("Service.java")
+                .contains("ServiceTest.java");
+    }
+
+    @Test
     void shouldIncludeSuggestedCodeSnippets() {
         // given
         var diff = aPrDiff();

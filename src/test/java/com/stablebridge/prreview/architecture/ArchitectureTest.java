@@ -15,6 +15,14 @@ class ArchitectureTest {
     private static final String DOMAIN = "..domain..";
     private static final String INFRASTRUCTURE = "..infrastructure..";
     private static final String AGENT = "..agent..";
+    private static final String SHELL = "..shell..";
+    private static final String APPLICATION = "..application..";
+
+    @ArchTest
+    static final ArchRule domainShouldNotDependOnApplication =
+            noClasses().that().resideInAPackage(DOMAIN)
+                    .should().dependOnClassesThat().resideInAPackage(APPLICATION)
+                    .because("Domain must not depend on application layer");
 
     @ArchTest
     static final ArchRule domainShouldNotDependOnInfrastructure =
@@ -43,6 +51,12 @@ class ArchitectureTest {
                     .should().dependOnClassesThat()
                     .resideInAPackage("org.springframework.web.reactive..")
                     .because("Domain must not use WebClient — that belongs in infrastructure");
+
+    @ArchTest
+    static final ArchRule domainShouldNotDependOnShell =
+            noClasses().that().resideInAPackage(DOMAIN)
+                    .should().dependOnClassesThat().resideInAPackage(SHELL)
+                    .because("Domain must not depend on shell layer");
 
     @ArchTest
     static final ArchRule infrastructureShouldNotDependOnAgent =
